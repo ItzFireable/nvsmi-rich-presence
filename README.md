@@ -1,3 +1,16 @@
 # nvsmi-rich-presence
 Shows your current GPU details in your Discord Rich Presence.
 
+https://imgur.com/WFQ7VFZ
+
+# Setup
+
+- Clone the repository
+- Run npm install
+- Run node index.js
+
+Status now shows up, the command prompt needs to be open for it to show (this is version 1)
+
+# Contribute
+
+pls no messy code
