@@ -1,7 +1,7 @@
 # nvsmi-rich-presence
 Shows your current GPU details in your Discord Rich Presence.
 
-https://imgur.com/WFQ7VFZ
+https://i.imgur.com/WFQ7VFZ.png
 
 # Setup
 
