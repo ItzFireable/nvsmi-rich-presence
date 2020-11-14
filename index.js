@@ -23,4 +23,4 @@ setTimeout(function() {
         largeImageText: rpcdata["nvidia_smi_log"]["gpu"]["fb_memory_usage"]["used"].substring(0, rpcdata["nvidia_smi_log"]["gpu"]["fb_memory_usage"]["used"].length - 4) + " / " + rpcdata["nvidia_smi_log"]["gpu"]["fb_memory_usage"]["total"] + " memory usage, " + rpcdata["nvidia_smi_log"]["gpu"]["power_readings"]["power_draw"].substring(0, rpcdata["nvidia_smi_log"]["gpu"]["power_readings"]["power_draw"].length - 2) + "W / " + rpcdata["nvidia_smi_log"]["gpu"]["power_readings"]["power_limit"].substring(0, rpcdata["nvidia_smi_log"]["gpu"]["power_readings"]["power_limit"].length - 2) + "W power usage",
         instance: true,
       });
-},2000,false)
+},1000,false)
