@@ -4,16 +4,15 @@ const DiscordRPC = require('discord-rich-presence')('777277529299746817');
 let rpcdata
 let start = Date.now()
 
-smi(function (err, data) {
-    if (err) {
-        console.warn(err);
-    }
-    rpcdata = data
-    //console.log(data["nvidia_smi_log"]["gpu"]["product_name"])
-    //console.log(JSON.stringify(data, null, ' '))
-});
-
 setTimeout(function() {
+
+    smi(function (err, data) {
+        if (err) {
+            console.warn(err);
+        }
+        rpcdata = data
+    });
+
     DiscordRPC.updatePresence({
         state: rpcdata["nvidia_smi_log"]["gpu"]["temperature"]["gpu_temp"].substring(0, rpcdata["nvidia_smi_log"]["gpu"]["temperature"]["gpu_temp"].length - 2) + "°C - " + rpcdata["nvidia_smi_log"]["gpu"]["utilization"]["gpu_util"].substring(0, rpcdata["nvidia_smi_log"]["gpu"]["utilization"]["gpu_util"].length - 2) + "% usage",
         details: rpcdata["nvidia_smi_log"]["gpu"]["product_name"],
