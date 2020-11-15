@@ -3,13 +3,13 @@ Shows your current GPU details in your Discord Rich Presence.
 
 ![image](https://i.imgur.com/WFQ7VFZ.png)
 
-# Setup
+# Compile & run
 
 - Clone the repository
 - Run npm install
 - Run node index.js
 
-Status now shows up, the command prompt needs to be open for it to show (this is version 1)
+Status now shows up, the command prompt hides itself after it sets up, and becomes a tray application.
 
 # Contribute
 
