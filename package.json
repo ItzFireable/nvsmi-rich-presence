@@ -11,6 +11,7 @@
   "dependencies": {
     "discord-rich-presence": "0.0.8",
     "discord-rpc": "^3.1.4",
-    "node-nvidia-smi": "^1.0.0"
+    "node-nvidia-smi": "^1.0.0",
+    "systray": "^1.0.5"
   }
 }

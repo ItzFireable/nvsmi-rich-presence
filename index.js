@@ -1,5 +1,43 @@
+const clientid = "777277529299746817"
+
 const smi = require('node-nvidia-smi');
-const DiscordRPC = require('discord-rich-presence')('777277529299746817');
+const DiscordRPC = require('discord-rich-presence')(clientid);
+const SysTray = require('systray').default;
+
+var fs = require('fs');
+
+// function to encode file data to base64 encoded string
+function base64_encode(file) {
+    // read binary data
+    var bitmap = fs.readFileSync(file);
+    // convert binary data to base64 encoded string
+    return new Buffer.from(bitmap).toString('base64');
+}
+
+let enabled = true
+
+const systray = new SysTray({
+    menu: {
+        // you should using .png icon in macOS/Linux, but .ico format in windows
+        icon: base64_encode('./nv.ico'),
+        title: "nvsmi-rich-presence",
+        tooltip: "nvsmi-rich-presence",
+        items: [{
+            title: "Exit",
+            tooltip: "",
+            checked: false,
+            enabled: true
+        }]
+    },
+    debug: false,
+    copyDir: true, // copy go tray binary to outside directory, useful for packing tool like pkg.
+})
+
+systray.onClick(action => {
+    if (action.seq_id === 0) {
+        systray.kill()
+    }
+})
 
 var rpcdata = {}
 let start = Date.now()
