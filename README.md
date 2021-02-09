@@ -5,6 +5,7 @@ Shows your current GPU details in your Discord Rich Presence.
 
 # Compile & run
 
+- Install node.js (https://nodejs.org/en/)
 - Clone the repository
 - Run npm install
 - Run node index.js
