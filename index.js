@@ -24,7 +24,7 @@ let enabled = true
 const systray = new SysTray({
     menu: {
         // you should using .png icon in macOS/Linux, but .ico format in windows
-        icon: base64_encode('./nv.ico'),
+        icon: base64_encode('./important/nv.ico'),
         title: "nvsmi-rich-presence",
         tooltip: "nvsmi-rich-presence",
         items: [{
